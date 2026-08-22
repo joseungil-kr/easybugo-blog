@@ -21,3 +21,5 @@ faq:
 정해진 기준은 아니며, 조문을 직접 가기 어려운 상황에서 마음을 전하는 수단이라는 점이 더 중요합니다.
 
 리본 문구가 궁금하다면 <a class="action-link" href="/posts/funeral-wreath-ribbon-message/">근조화환 리본 문구</a>를 참고하세요.
+
+{{< wreath-price >}}

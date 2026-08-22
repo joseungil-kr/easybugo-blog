@@ -32,3 +32,5 @@ faq:
 ```
 
 리본 전체 문구 구성은 <a class="action-link" href="/posts/funeral-wreath-ribbon-message/">근조화환 리본 문구</a>를 참고하세요.
+
+{{< wreath-price >}}

@@ -28,3 +28,5 @@ faq:
 ```
 
 회사명·소속 적는 법이 궁금하다면 <a class="action-link" href="/posts/funeral-wreath-company-name/">근조 리본 회사명 쓰는 법</a>을 참고하세요.
+
+{{< wreath-price >}}

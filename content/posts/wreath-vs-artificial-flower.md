@@ -23,3 +23,5 @@ faq:
 - **생화 근조화환**: 비용이 더 들지만 신선하고 화사한 느낌
 
 3단·5단 같은 크기 차이가 궁금하다면 <a class="action-link" href="/posts/3tier-vs-5tier-wreath/">3단 5단 화환 차이</a>를 참고하세요.
+
+{{< wreath-price >}}
