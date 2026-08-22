@@ -6,5 +6,8 @@ publishDir = 'web'
 [permalinks]
   posts = '/posts/:slug/'
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   description = '장례 준비부터 부고 문자, 조문 예절까지 — 이지부고가 정리한 장례 정보'
