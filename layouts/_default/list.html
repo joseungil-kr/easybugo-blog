@@ -13,12 +13,35 @@
   <h1>{{ if .IsHome }}장례 정보 모아보기{{ else }}{{ .Title }}{{ end }}</h1>
   <p class="guide-lead">부고 문자부터 장례 절차, 조문 예절까지 — 검색으로 찾아오신 그 궁금증에 바로 답합니다.</p>
 </div>
-<h2 id="posts">최신 글</h2>
-<div class="search-results" style="max-width:none">
-  {{ range (where .Site.RegularPages "Type" "posts") }}
+
+{{ $cats := .Site.Taxonomies.categories.Alphabetical }}
+{{ if gt (len $cats) 0 }}
+<nav class="guide-nav" aria-label="카테고리" style="flex-wrap:wrap">
+  <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="current"{{ end }}>전체</a>
+  {{ range $cats }}
+  <a href="{{ .Page.Permalink }}"{{ if eq $.Title .Page.Title }} class="current"{{ end }}>{{ .Page.Title }} ({{ .Count }})</a>
+  {{ end }}
+</nav>
+{{ end }}
+
+<h2 id="posts">{{ if .IsHome }}최신 글{{ else }}{{ .Title }} 글 목록{{ end }}</h2>
+{{ $pages := where .Pages "Type" "posts" }}
+{{ if .IsHome }}{{ $pages = where .Site.RegularPages "Type" "posts" }}{{ end }}
+{{ $paginator := .Paginate $pages }}
+<div class="search-results" style="max-width:none;border-color:var(--line)">
+  {{ range $paginator.Pages }}
   <a class="search-result" style="display:block;text-decoration:none;color:inherit" href="{{ .Permalink }}">{{ .Title }}</a>
   {{ end }}
 </div>
+
+{{ if gt $paginator.TotalPages 1 }}
+<div class="choice-row" style="margin-top:14px;justify-content:center">
+  {{ if $paginator.HasPrev }}<a class="outline-button" href="{{ $paginator.Prev.URL }}">이전</a>{{ end }}
+  <span class="muted" style="align-self:center">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+  {{ if $paginator.HasNext }}<a class="outline-button" href="{{ $paginator.Next.URL }}">다음</a>{{ end }}
+</div>
+{{ end }}
+
 <div class="guide-cta">
   <div class="section-title">부고를 전해야 한다면</div>
   <div class="muted">여섯 가지만 입력하면 90초 안에 모바일 부고장이 만들어집니다.</div>

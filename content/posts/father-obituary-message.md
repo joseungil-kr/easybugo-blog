@@ -2,7 +2,7 @@
 title: "부친상 부고 문자 양식"
 description: "아버지 상을 당했을 때 보내는 부고 문자, [부친상] 제목부터 본문까지 그대로 쓸 수 있는 양식입니다."
 date: 2026-08-22
-category: "관계별 부고 문자"
+categories: ["관계별 부고 문자"]
 lead: "아버지의 부고를 알릴 때는 [부친상]으로 시작하는 것이 일반적입니다. 그대로 쓸 수 있는 양식을 정리했습니다."
 slug: "father-obituary-message"
 faq:

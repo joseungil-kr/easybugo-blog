@@ -9,5 +9,8 @@ publishDir = 'web'
 [markup.goldmark.renderer]
   unsafe = true
 
+[pagination]
+  pagerSize = 20
+
 [params]
   description = '장례 준비부터 부고 문자, 조문 예절까지 — 이지부고가 정리한 장례 정보'

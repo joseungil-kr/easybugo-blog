@@ -19,7 +19,9 @@
 {{ end }}
 {{ end }}
 {{ define "main" }}
-<div class="guide-kicker">{{ .Params.category }}</div>
+<div class="guide-kicker">
+  {{ range $i, $t := .GetTerms "categories" }}{{ if $i }} · {{ end }}<a href="{{ $t.Permalink }}" style="color:inherit">{{ $t.LinkTitle }}</a>{{ end }}
+</div>
 <div class="guide-hero">
   <h1>{{ .Title }}</h1>
   <p class="guide-lead">{{ .Params.lead }}</p>
