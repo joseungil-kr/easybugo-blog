@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ block "title" . }}{{ .Title }} | 이지부고{{ end }}</title>
+{{ block "meta" . }}{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="stylesheet" href="https://easybugo.com/css/style.css">
+{{ block "schema" . }}{{ end }}
+</head>
+<body>
+<div class="topbar"><a class="topbar-brand" href="https://easybugo.com/">EASYBUGO</a></div>
+<div class="wrap guide">
+{{ block "main" . }}{{ end }}
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://easybugo.com/terms.html">이용약관</a>·<a href="https://easybugo.com/privacy.html">개인정보처리방침</a>·<a href="https://easybugo.com/support.html">고객센터</a>
+  </div>
+  상호 이지부고 · 대표 조승일 · 사업자등록번호 588-91-01981<br>
+  경기도 안산시 상록구 반석로 54 · 대표전화 1844-0644 · customer@fwith.co.kr
+</div>
+</body>
+</html>

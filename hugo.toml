@@ -1,0 +1,9 @@
+baseURL = 'https://blog.easybugo.com/'
+languageCode = 'ko-kr'
+title = '이지부고 장례정보'
+
+[permalinks]
+  posts = '/posts/:slug/'
+
+[params]
+  description = '장례 준비부터 부고 문자, 조문 예절까지 — 이지부고가 정리한 장례 정보'

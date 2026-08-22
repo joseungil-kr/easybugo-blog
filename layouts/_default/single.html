@@ -1,0 +1,39 @@
+{{ define "title" }}{{ .Title }} | 이지부고{{ end }}
+{{ define "meta" }}
+<meta name="description" content="{{ .Description }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:image" content="https://easybugo.com/img/og-obit.png">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+{{ end }}
+{{ define "schema" }}
+{{ with .Params.faq }}
+{{ $entities := slice }}
+{{ range . }}
+{{ $entities = $entities | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}
+{{ end }}
+{{ $schema := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $entities }}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{ end }}
+{{ end }}
+{{ define "main" }}
+<div class="guide-kicker">{{ .Params.category }}</div>
+<div class="guide-hero">
+  <h1>{{ .Title }}</h1>
+  <p class="guide-lead">{{ .Params.lead }}</p>
+</div>
+{{ .Content }}
+{{ with .Params.faq }}
+<h2 id="faq">자주 묻는 질문</h2>
+{{ range . }}
+<details class="disclosure"><summary>{{ .q }}</summary><div class="disclosure-body">{{ .a }}</div></details>
+{{ end }}
+{{ end }}
+<div class="guide-cta">
+  <div class="section-title">부고를 전해야 한다면</div>
+  <div class="muted">여섯 가지만 입력하면 90초 안에 모바일 부고장이 만들어집니다.</div>
+  <a class="dark-button" href="https://easybugo.com/new.html">부고장 만들기</a>
+</div>
+{{ end }}
