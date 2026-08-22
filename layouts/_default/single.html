@@ -20,7 +20,8 @@
 {{ end }}
 {{ define "main" }}
 <div class="guide-kicker">
-  {{ range $i, $t := .GetTerms "categories" }}{{ if $i }} · {{ end }}<a href="{{ $t.Permalink }}" style="color:inherit">{{ $t.LinkTitle }}</a>{{ end }}
+  <a href="https://blog.easybugo.com/" style="color:inherit">블로그</a>
+  {{ range .GetTerms "categories" }} &gt; <a href="{{ .Permalink }}" style="color:inherit">{{ .LinkTitle }}</a>{{ end }}
 </div>
 <div class="guide-hero">
   <h1>{{ .Title }}</h1>
@@ -40,7 +41,7 @@
 {{ end }}
 <div class="guide-cta">
   <div class="section-title">부고를 전해야 한다면</div>
-  <div class="muted">여섯 가지만 입력하면 90초 안에 모바일 부고장이 만들어집니다.</div>
+  <div class="muted">여섯 가지만 입력하면 60초 안에 모바일 부고장이 만들어집니다.</div>
   <a class="dark-button" href="https://easybugo.com/new.html">부고장 만들기</a>
 </div>
 {{ end }}

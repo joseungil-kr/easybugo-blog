@@ -17,8 +17,7 @@
 
 {{ $cats := .Site.Taxonomies.categories.Alphabetical }}
 {{ if gt (len $cats) 0 }}
-<nav class="guide-nav" aria-label="카테고리" style="flex-wrap:wrap">
-  <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="current"{{ end }}>전체</a>
+<nav class="cat-grid" aria-label="카테고리">
   {{ range $cats }}
   <a href="{{ .Page.Permalink }}"{{ if eq $.Title .Page.Title }} class="current"{{ end }}>{{ .Page.Title }} ({{ .Count }})</a>
   {{ end }}
@@ -45,7 +44,7 @@
 
 <div class="guide-cta">
   <div class="section-title">부고를 전해야 한다면</div>
-  <div class="muted">여섯 가지만 입력하면 90초 안에 모바일 부고장이 만들어집니다.</div>
+  <div class="muted">여섯 가지만 입력하면 60초 안에 모바일 부고장이 만들어집니다.</div>
   <a class="dark-button" href="https://easybugo.com/new.html">부고장 만들기</a>
 </div>
 {{ end }}
