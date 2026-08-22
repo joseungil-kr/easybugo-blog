@@ -3,7 +3,7 @@
 <meta name="description" content="{{ .Description }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Description }}">
-<meta property="og:image" content="https://easybugo.com/img/og-obit.png">
+<meta property="og:image" content="{{ .Params.image | default "https://easybugo.com/img/og-obit.png" | absURL }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,8 +24,10 @@
   <h1>{{ .Title }}</h1>
   <p class="guide-lead">{{ .Params.lead }}</p>
 </div>
-{{ with .Params.image }}
-<img class="guide-illust" src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+{{ if .Params.image }}
+<img class="guide-illust" src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+{{ else }}
+<img class="guide-illust" src="https://easybugo.com/img/og-obit.png" alt="{{ .Title }} — 이지부고" loading="lazy" style="max-width:280px;margin-left:auto;margin-right:auto">
 {{ end }}
 {{ .Content }}
 {{ with .Params.faq }}
