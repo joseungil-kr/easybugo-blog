@@ -1,6 +1,7 @@
 {{ define "title" }}{{ if .IsHome }}이지부고 장례정보{{ else }}{{ .Title }}{{ end }} | 이지부고{{ end }}
 {{ define "meta" }}
-<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ if eq .Kind "taxonomy" }}<meta name="robots" content="noindex,follow">{{ end }}
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Title }} 관련 글 모음 — 이지부고에서 정리한 {{ .Title }} 정보입니다.{{ end }}">
 <meta property="og:title" content="{{ if .IsHome }}이지부고 장례정보{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:image" content="https://easybugo.com/img/og-obit.png">
 <meta property="og:url" content="{{ .Permalink }}">
