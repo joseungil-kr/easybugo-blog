@@ -1,6 +1,7 @@
 baseURL = 'https://blog.easybugo.com/'
 languageCode = 'ko-kr'
 title = '이지부고 장례정보'
+publishDir = 'web'
 
 [permalinks]
   posts = '/posts/:slug/'
