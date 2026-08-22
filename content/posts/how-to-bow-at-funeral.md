@@ -22,6 +22,10 @@ faq:
 
 ## 종교에 따라
 
-기독교·천주교식 빈소는 절 대신 묵념으로 대신합니다.
+기독교·천주교식 빈소는 절 대신 묵념으로 대신합니다. 불교식은 절 두 번 반이 기본이라 방식이 조금 다릅니다.
 
-절하는 법을 포함한 조문 전체 순서는 <a class="action-link" href="https://easybugo.com/guide/etiquette.html">장례식 조문 예절</a>에서 자세히 확인하세요.
+- <a class="action-link" href="/posts/christian-funeral-etiquette/">기독교 장례식 조문 예절</a>
+- <a class="action-link" href="/posts/catholic-funeral-etiquette/">천주교 장례식 조문 예절</a>
+- <a class="action-link" href="/posts/buddhist-funeral-etiquette/">불교 장례식 조문 예절</a>
+
+조문 전체 순서는 <a class="action-link" href="https://easybugo.com/guide/etiquette.html">장례식 조문 예절</a>에서 자세히 확인하세요.
