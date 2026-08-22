@@ -5,6 +5,7 @@ date: 2026-08-22
 category: "부고 문자"
 lead: "부고 문자, 어떻게 써야 할지 막막하실 겁니다. 이름과 날짜만 바꿔서 바로 쓸 수 있는 양식을 정리했습니다."
 slug: "obituary-message-format"
+image: "/img/easybugo-cover.svg"
 faq:
   - q: "부고 문자는 누가 보내야 하나요?"
     a: "보통 상주(배우자, 자녀)나 가까운 가족이 보냅니다. 지인이 많으면 그룹별로 나눠서 보내는 경우도 많습니다."

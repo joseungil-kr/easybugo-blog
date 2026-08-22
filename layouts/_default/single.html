@@ -24,6 +24,9 @@
   <h1>{{ .Title }}</h1>
   <p class="guide-lead">{{ .Params.lead }}</p>
 </div>
+{{ with .Params.image }}
+<img class="guide-illust" src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+{{ end }}
 {{ .Content }}
 {{ with .Params.faq }}
 <h2 id="faq">자주 묻는 질문</h2>
