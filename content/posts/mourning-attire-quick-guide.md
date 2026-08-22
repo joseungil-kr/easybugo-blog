@@ -18,6 +18,6 @@ faq:
 
 ## 급할 때
 
-정장이 없어도 무늬 없는 어두운 색 옷이면 충분합니다. 청바지·반팔티·운동화만 피하세요.
+정장이 없어도 무늬 없는 어두운 색 옷이면 충분합니다. 청바지·반팔티·운동화만 피하세요. 회사에서 바로, 또는 작업복 차림으로 급하게 가야 한다면 <a class="action-link" href="/posts/no-suit-urgent-funeral-visit/">정장 없이 급하게 조문 가야 할 때</a>에서 더 자세히 확인하세요.
 
-남성·여성 복장, 정장 없을 때 대처법, 계절별 팁까지 자세한 내용은 <a class="action-link" href="https://easybugo.com/guide/dress-code.html">장례식 복장 가이드</a>에서 확인하세요.
+남성·여성 복장, 계절별 팁까지 자세한 내용은 <a class="action-link" href="https://easybugo.com/guide/dress-code.html">장례식 복장 가이드</a>에서 확인하세요.
