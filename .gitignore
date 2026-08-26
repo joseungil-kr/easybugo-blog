@@ -2,3 +2,4 @@ public/
 web/
 resources/_gen/
 .hugo_build.lock
+.wrangler/
