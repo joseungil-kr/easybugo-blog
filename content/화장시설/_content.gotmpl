@@ -1,0 +1,4 @@
+{{ $d := index site.Data.regions "화장시설" }}
+{{ range $d.pages }}
+  {{ $.AddPage (dict "kind" "page" "path" .relpath "title" .title "description" .description "params" .) }}
+{{ end }}

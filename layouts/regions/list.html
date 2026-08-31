@@ -1,0 +1,34 @@
+{{ define "title" }}{{ .Title }} | 이지부고{{ end }}
+{{ define "meta" }}
+{{ $d := index site.Data.regions .Section }}
+<meta name="description" content="전국 {{ $d.label }} {{ $d.total }}곳을 시·도별로 정리했습니다. 주소·전화번호·주차·편의시설을 한눈에 확인하세요.">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="전국 {{ $d.label }} {{ $d.total }}곳을 시·도별로 정리했습니다.">
+<meta property="og:image" content="https://easybugo.com/img/og-obit.png">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="website">
+{{ end }}
+{{ define "main" }}
+{{ $d := index site.Data.regions .Section }}
+<div class="guide-kicker"><a href="https://blog.easybugo.com/" style="color:inherit">이지부고 장례정보</a> &gt; {{ $d.label }}</div>
+<div class="guide-hero">
+  <h1>{{ .Title }}</h1>
+  <p class="guide-lead">{{ $d.rootSummary }}</p>
+</div>
+
+<h2 id="sido">시·도별로 보기</h2>
+<nav class="cat-grid" aria-label="시도">
+  {{ range $d.sido }}<a href="{{ .url }}">{{ .title }}</a>{{ end }}
+</nav>
+
+<h2 id="other">다른 장사시설</h2>
+<div class="choice-row" style="flex-wrap:wrap">
+  {{ range slice "장례식장" "화장시설" "봉안시설" "자연장지" }}
+  {{ if ne . $d.slug }}
+  {{ $o := index site.Data.regions . }}
+  <a class="outline-button" style="text-decoration:none" href="/{{ . }}/">전국 {{ $o.label }} {{ $o.total }}곳</a>
+  {{ end }}
+  {{ end }}
+</div>
+{{ partial "region-foot.html" . }}
+{{ end }}

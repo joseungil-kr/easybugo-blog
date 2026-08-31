@@ -24,6 +24,16 @@
 </nav>
 {{ end }}
 
+{{ if .IsHome }}
+<h2 id="places">지역별 장사시설 찾기</h2>
+<div class="choice-row" style="flex-wrap:wrap;margin-bottom:26px">
+  {{ range slice "장례식장" "화장시설" "봉안시설" "자연장지" }}
+  {{ $d := index site.Data.regions . }}
+  <a class="outline-button" style="text-decoration:none" href="/{{ . }}/">전국 {{ $d.label }} {{ $d.total }}곳</a>
+  {{ end }}
+</div>
+{{ end }}
+
 <h2 id="posts">{{ if .IsHome }}최신 글{{ else }}{{ .Title }} 글 목록{{ end }}</h2>
 {{ $pages := where .Pages "Type" "posts" }}
 {{ if .IsHome }}{{ $pages = where .Site.RegularPages "Type" "posts" }}{{ end }}

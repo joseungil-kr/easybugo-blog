@@ -1,0 +1,47 @@
+{{ define "title" }}{{ .Title }} — 주소·전화·주차 | 이지부고{{ end }}
+{{ define "meta" }}
+<meta name="description" content="{{ .Description }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:image" content="https://easybugo.com/img/og-obit.png">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="website">
+{{ end }}
+{{ define "main" }}
+{{ $p := .Params }}
+{{ $slug := $p.label }}
+<div class="guide-kicker">
+  <a href="https://blog.easybugo.com/" style="color:inherit">이지부고 장례정보</a>
+  &gt; <a href="/{{ $slug }}/" style="color:inherit">{{ $p.label }}</a>
+  {{ if $p.sigungu }} &gt; <a href="/{{ $slug }}/{{ $p.sido }}/" style="color:inherit">{{ $p.sido }}</a>{{ end }}
+</div>
+<div class="guide-hero">
+  <h1>{{ .Title }}</h1>
+  <p class="guide-lead">{{ $p.summary }}</p>
+</div>
+
+{{ with $p.children }}
+<h2 id="sigungu">시·군·구별로 보기</h2>
+<nav class="cat-grid" aria-label="시군구">
+  {{ range . }}<a href="{{ .url }}">{{ .title }}</a>{{ end }}
+</nav>
+<div class="muted" style="font-size:13px;margin:-18px 0 26px">
+  시설이 5곳 미만인 시·군·구는 따로 페이지를 두지 않았습니다. 아래 목록에 모두 들어 있습니다.
+</div>
+{{ end }}
+
+<h2 id="list">{{ if $p.sigungu }}{{ $p.sigungu }}{{ else }}{{ $p.sido }}{{ end }} {{ $p.label }} {{ $p.count }}곳</h2>
+{{ partial "facility-items.html" $p.items }}
+
+<h2 id="nearby">함께 보면 좋은 지역 정보</h2>
+<div class="choice-row" style="flex-wrap:wrap">
+  {{ range slice "장례식장" "화장시설" "봉안시설" "자연장지" }}
+  {{ if ne . $slug }}
+  {{ with site.GetPage (printf "/%s/%s" . $p.sido) }}
+  <a class="outline-button" style="text-decoration:none" href="{{ .RelPermalink }}">{{ $p.sido }} {{ .Params.label }}</a>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</div>
+{{ partial "region-foot.html" . }}
+{{ end }}

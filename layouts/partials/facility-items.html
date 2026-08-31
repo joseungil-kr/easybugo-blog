@@ -1,0 +1,25 @@
+{{ range . }}
+<div class="section" style="gap:8px">
+  <div class="section-title">{{ .name }}</div>
+  <div class="muted">{{ .addr }}</div>
+  <div class="muted" style="font-size:13px">
+    {{ with .publicPrivate }}{{ . }}{{ end }}
+    {{ with .roomCount }}{{ if ne . "0" }} · 빈소 {{ . }}실{{ end }}{{ end }}
+    {{ with .bodyCapacity }}{{ if ne . "0" }} · 안치 {{ . }}구{{ end }}{{ end }}
+    {{ with .furnaceCount }}{{ if ne . "0" }} · 화장로 {{ . }}기{{ end }}{{ end }}
+    {{ with .capacity }}{{ if ne . "0" }} · 안치능력 {{ . }}위{{ end }}{{ end }}
+    {{ with .retentionYears }}{{ if ne . "0" }} · 안치기간 {{ . }}년{{ end }}{{ end }}
+    {{ with .interCapacity }}{{ if ne . "0" }} · 안장능력 {{ . }}위{{ end }}{{ end }}
+    {{ with .parkingCount }}{{ if ne . "0" }} · 주차 {{ . }}면{{ end }}{{ end }}
+    {{ with .amenities }} · {{ delimit . ", " }}{{ end }}
+  </div>
+  {{ with .tel }}<a class="phone-link" href="tel:{{ . }}">☎ {{ . }}</a>{{ end }}
+  {{ with .homepage }}{{ $h := . }}{{ if not (hasPrefix $h "http") }}{{ $h = printf "http://%s" $h }}{{ end }}<a class="action-link" href="{{ $h }}" target="_blank" rel="noopener nofollow">홈페이지</a>{{ end }}
+  <div class="map-row">
+    {{ $q := printf "%s %s" .name .addr }}
+    <a class="outline-button" target="_blank" rel="noopener" href="https://map.naver.com/p/search/{{ $q | urlquery }}">네이버지도</a>
+    <a class="outline-button" target="_blank" rel="noopener" href="https://map.kakao.com/?q={{ $q | urlquery }}">카카오맵</a>
+    <a class="outline-button" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query={{ $q | urlquery }}">구글맵</a>
+  </div>
+</div>
+{{ end }}
