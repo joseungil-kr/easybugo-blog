@@ -33,6 +33,21 @@
 <h2 id="list">{{ if $p.sigungu }}{{ $p.sigungu }}{{ else }}{{ $p.sido }}{{ end }} {{ $p.label }} {{ $p.count }}곳</h2>
 {{ partial "facility-items.html" $p.items }}
 
+{{ if $p.sigungu }}
+{{ with site.GetPage (printf "/%s/%s" $slug $p.sido) }}
+{{ $sibs := where .Params.children "url" "!=" $p.url }}
+{{ with $sibs }}
+<h2 id="siblings">{{ $p.sido }}의 다른 시·군·구</h2>
+<nav class="cat-grid" aria-label="같은 시도의 다른 시군구">
+  {{ range . }}<a href="{{ .url }}">{{ .title }}</a>{{ end }}
+</nav>
+{{ end }}
+<div class="muted" style="font-size:13px;margin:-18px 0 26px">
+  <a class="action-link" href="{{ .RelPermalink }}">{{ .Title }}</a> 에서 전체 목록을 볼 수 있습니다.
+</div>
+{{ end }}
+{{ end }}
+
 <h2 id="nearby">함께 보면 좋은 지역 정보</h2>
 <div class="choice-row" style="flex-wrap:wrap">
   {{ range slice "장례식장" "화장시설" "봉안시설" "자연장지" }}
