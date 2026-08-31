@@ -1,0 +1,39 @@
+{{/* .tiles = 숫자 타일, .chart = 지역별 건수(내림차순), .caption = 그래프 제목 */}}
+<style>
+.rg-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:22px 0}
+.rg-tile{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.rg-tile-v{font-family:var(--mono);font-size:26px;line-height:1.2;color:var(--ink)}
+.rg-tile-u{font-family:var(--sans);font-size:14px;color:var(--ink-soft);margin-left:3px}
+.rg-tile-l{font-size:13px;color:var(--ink-soft);margin-top:4px}
+.rg-fig{margin:26px 0;padding:0}
+.rg-cap{font-size:13px;color:var(--ink-soft);margin-bottom:10px}
+.rg-row{display:grid;grid-template-columns:6.5em 1fr auto;align-items:center;gap:10px;margin-bottom:6px}
+.rg-name{font-size:14px;color:var(--ink);word-break:keep-all}
+.rg-track{background:var(--surface-2);border-radius:var(--r);height:12px}
+.rg-bar{background:var(--ink-blue);border-radius:var(--r);height:12px;min-width:3px}
+.rg-val{font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
+@media(max-width:480px){.rg-row{grid-template-columns:5.5em 1fr auto;gap:8px}.rg-name{font-size:13px}}
+</style>
+{{ with .tiles }}
+<div class="rg-tiles">
+  {{ range . }}
+  <div class="rg-tile">
+    <div class="rg-tile-v">{{ .value }}<span class="rg-tile-u">{{ .unit }}</span></div>
+    <div class="rg-tile-l">{{ .label }}</div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+{{ with .chart }}
+{{ $max := (index . 0).count }}
+<figure class="rg-fig">
+  <div class="rg-cap">{{ $.caption }}</div>
+  {{ range . }}
+  <div class="rg-row">
+    <div class="rg-name">{{ .label }}</div>
+    <div class="rg-track"><div class="rg-bar" style="width:{{ printf "%.1f" (mul (div .count $max) 100.0) }}%"></div></div>
+    <div class="rg-val">{{ .count }}곳</div>
+  </div>
+  {{ end }}
+</figure>
+{{ end }}

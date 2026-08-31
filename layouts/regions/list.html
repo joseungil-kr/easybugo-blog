@@ -16,6 +16,8 @@
   <p class="guide-lead">{{ $d.rootSummary }}</p>
 </div>
 
+{{ partial "region-figure.html" (dict "tiles" $d.rootTiles "chart" $d.rootChart "caption" (printf "시·도별 %s 수" $d.label)) }}
+
 <h2 id="sido">시·도별로 보기</h2>
 <nav class="cat-grid" aria-label="시도">
   {{ range $d.sido }}<a href="{{ .url }}">{{ .title }}</a>{{ end }}

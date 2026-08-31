@@ -20,6 +20,8 @@
   <p class="guide-lead">{{ $p.summary }}</p>
 </div>
 
+{{ partial "region-figure.html" (dict "tiles" $p.tiles "chart" $p.chart "caption" (printf "%s 시·군·구별 %s 수" $p.sido $p.label)) }}
+
 {{ with $p.children }}
 <h2 id="sigungu">시·군·구별로 보기</h2>
 <nav class="cat-grid" aria-label="시군구">
