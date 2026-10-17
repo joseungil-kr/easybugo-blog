@@ -57,4 +57,6 @@ faq:
 
 49재는 한 번, 기제사는 해마다 반복된다는 점이 가장 큰 차이입니다.
 
-발인 이후 절차가 더 궁금하다면 <a class="action-link" href="https://easybugo.com/guide/procedure.html">3일장 장례 절차 가이드</a>도 참고하세요.
+발인 이후 절차가 더 궁금하다면 <a class="action-link" href="https://easybugo.com/guide/procedure.html">3일장 장례 절차 가이드</a>를 참고하세요.
+
+초재부터 49재, 100일재, 첫 기일까지 전체 일정표 확인과 가족 카카오톡 일정 공유, 캘린더 등록이 필요하시다면 <a class="action-link" href="https://easybugo.com/calc-49jae.html">이지부고 49재 계산기</a>를 이용해 보세요.

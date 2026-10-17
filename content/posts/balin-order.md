@@ -26,3 +26,8 @@ faq:
 ## 운구 인원이 궁금하다면
 
 발인 순서 중 운구는 별도로 인원 구성이 필요합니다. <a class="action-link" href="/posts/pallbearer-count/">운구 인원</a>을 참고하세요.
+
+## 발인 이후 49재 및 제례 일정
+
+발인과 안치를 마친 뒤 삼우제 및 초재~49재, 100일재, 첫 기일 일정을 가족들과 미리 챙기시려면 <a class="action-link" href="https://easybugo.com/calc-49jae.html">이지부고 49재 계산기</a>를 활용해 보세요.
+
