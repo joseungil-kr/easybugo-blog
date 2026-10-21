@@ -1,4 +1,10 @@
 {{ $d := index site.Data.regions "봉안시설" }}
 {{ range $d.pages }}
-  {{ $.AddPage (dict "kind" "page" "path" .relpath "title" .title "description" .description "params" .) }}
+  {{ $title := .title }}
+  {{ $description := .description }}
+  {{ if and .sigungu (ne .sido .sigungu) }}
+    {{ $title = printf "%s %s" .sido $title }}
+    {{ $description = printf "%s %s" .sido $description }}
+  {{ end }}
+  {{ $.AddPage (dict "kind" "page" "path" .relpath "title" $title "description" $description "params" .) }}
 {{ end }}
