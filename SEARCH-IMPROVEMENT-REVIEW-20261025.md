@@ -121,7 +121,7 @@
 
 ### 빌드와 배포 검증 한계
 
-저장소 트리에서 .github/workflows 파일이 보이지 않고 Actions runs 조회도 0건이었다. 이는 GitHub Actions 경로의 증거가 없다는 뜻이며 Cloudflare Pages 경로가 없다는 뜻은 아니다. 이번 단계에서는 해당 SHA에 연결된 Cloudflare Pages 빌드/미리보기 증거를 확보하지 못했으므로 렌더링 및 Hugo 빌드는 미검증으로 유지한다. frontmatter·FAQ·파일 저장 재조회는 확인했으나 실제 HTML 렌더링은 확인하지 않았다.
+저장소 트리에서 .github/workflows 파일이 보이지 않고 Actions runs 조회도 0건이었다. 이는 GitHub Actions 경로의 증거가 없다는 뜻이며 Cloudflare Pages 경로가 없다는 뜻은 아니다. 2026-10-25 후속 확인에서 Cloudflare Pages check run 121125858574의 성공과 미리보기 URL이 확인되었다. 다만 미리보기 HTML을 직접 열어 렌더링·내부 링크를 확인하는 단계는 접근 실패로 미검증이다. frontmatter·FAQ·파일 저장 재조회는 별도로 확인했다.
 
 운영 main, PR #1, 운영 사이트, robots, sitemap, canonical, 시설 데이터, DNS·권한은 변경하지 않았다. PR #2는 Draft로 유지하며 검색 회복은 별도 GSC 증거가 나오기 전까지 미확정이다.
 
@@ -132,3 +132,60 @@
 - 직전 head d98e37bee3250840d791777e04205c0bcf7f8f51의 Cloudflare Pages 결과: completed / success. Preview URL은 https://4a06d96e.easybugo-blog.pages.dev, branch preview는 https://content-search-intent-top10.easybugo-blog.pages.dev.
 - 이 결과는 Cloudflare가 해당 SHA에 대해 미리보기 빌드/배포를 성공으로 보고했다는 증거다. 웹 열람 도구에서는 preview 페이지 URL이 접근 불가로 반환되어 실제 렌더된 본문 HTML과 내부 링크를 직접 검수하지 못했다. 따라서 빌드 성공은 확인됐으나, 실제 렌더링 검수는 미완료다.
 - 이 작업 기록을 추가 수정했으므로 새 head의 Cloudflare check run이 다시 실행될 수 있다. 최종 PR head의 check 상태를 별도로 재확인한다.
+
+
+## 추가 독립 검수 2 — 예문 관계·FAQ 의도·독자용 문장 (2026-10-25)
+
+### 예문에서 고인·상주·실제 발신인 구분
+
+시부상·시모상 대리 전달 예문의 기존 문장 "김○○님의 부고 소식을 대신 전합니다"는 김○○ 본인이 고인인 것처럼 읽힐 수 있어 수정했다.
+
+- 시부상: "김○○ 님의 시아버님 별세 소식을 대신 전합니다."
+- 시모상: "김○○ 님의 시어머님 별세 소식을 대신 전합니다."
+- 장인·장모상: "김○○ 님의 장인상 소식을 대신 전합니다."처럼 누구의 장인·장모인지 밝혀 적는다.
+- 백부·숙부: 조카가 직접 자기 가족의 부고를 알리는 예문과, 제3자가 지인에게 위로를 전하는 예문을 분리했다. 제3자가 고인을 자신의 큰아버지·작은아버지처럼 부르지 않도록 안내한다.
+- 이름과 빈소·발인 일정은 예시임을 명시하고, 실제 안내 원문을 확인해 대체하도록 유지했다.
+
+### main 대비 기존 FAQ 검색 의도 보존
+
+기존 질문의 문구를 무조건 그대로 유지하는 대신, 잘못된 답변의 단정은 수정하면서 유효한 질문 의도를 유지·재구성했다.
+
+| 파일 | main의 기존 질문 의도 | 최신 처리 및 대응 위치 |
+|---|---|---|
+| in-law-obituary-message.md | 빙부·빙모 뜻 | FAQ 1에서 사전 의미와 관습적 사용의 한계를 설명 |
+| in-law-obituary-message.md | 며느리가 시부모 부고를 알릴 때의 표현 | 원래 질문 복원. FAQ 2에서 일률적인 제목 규칙을 단정하지 않고 관계를 풀어 쓰는 대안 제시 |
+| in-law-obituary-message.md | 딸이 직접 상주로 알릴 때의 표현 | 원래 질문 복원. FAQ 3에서 딸 본인 부모와 사위의 처가 부모를 구분하고 원본 부고 확인 안내 |
+| husbands-father-condolence-text.md | 시부상은 며느리 입장에서만 쓰는가 | 원래 질문 복원. FAQ 1에서 용어 뜻과 검색자가 제3자일 가능성을 구분 |
+| husbands-father-condolence-text.md | 며느리에게 위로문자를 보낼 때 주의할 표현 | 원래 질문 복원. FAQ 2에서 감정·가족관계를 단정하지 않는 표현 제시 |
+| husbands-mother-condolence-text.md | 시모상은 며느리 입장에서만 쓰는가 | 원래 질문 복원. FAQ 1에서 같은 원칙 적용 |
+| husbands-mother-condolence-text.md | 시부상과 위로문자를 다르게 써야 하는가 | 원래 질문 복원. FAQ 2에서 고인 호칭을 관계에 맞춰 바꾸도록 답변 |
+| eldest-uncle-condolence-text.md | 백부·숙부 차이 | FAQ 1 유지 |
+| eldest-uncle-condolence-text.md | 평소 왕래가 적은 큰아버지상에 문자를 보내야 하는가 | 원래 질문 복원. FAQ 2에서 조카와 제3자 상황을 나눠 답변 |
+| younger-uncle-condolence-text.md | 결혼하지 않은 삼촌상도 숙부상인가 | 원래 질문 복원. FAQ 2에서 사전적 숙부의 범위와 가족의 일상 호칭을 구분 |
+| guestbook-writing-guide.md | 부의록에 무엇을 적는가 | FAQ 1에서 부의금 접수 기록 중심으로 수정 |
+| guestbook-writing-guide.md | 부의록은 누가 관리하는가 | 원래 질문 복원. FAQ 2에서 시설·가족의 역할 분담에 따라 달라짐을 설명 |
+| condolence-money-name-position.md | 앞면에 이름을 적어도 되는가 | FAQ 1 유지. 확인된 국립국어원 안내와 위치 관례의 범위를 구분 |
+| wife-condolence-text.md | 처상·실인상 중 어떤 표현이 맞는가 | FAQ 1 유지 |
+| wife-condolence-text.md | 자녀가 어릴 때 누구에게 위로문자를 보내는가 | FAQ 2 유지 |
+| mourning-armband-position.md | 완장 위치 | FAQ 1 유지. 전국 공통 규칙은 확인되지 않았다고 명시 |
+| mourning-armband-position.md | 완장은 직접 준비해야 하는가 | FAQ 2 유지. 용품 등록만으로 모든 시설의 지급 방식을 단정하지 않음 |
+
+### 독자용 본문에서 제작 메모 제거
+
+백부·숙부·시부·시모 글에 있던 "금액표와 친족 분류는 별도 검수 대상으로 남아 있다" 또는 유사한 내부 진행상태 표현을 제거했다. 연결 문서 condolence-money-by-relation.md의 금액표는 이미 제거되어 있으며, 독자에게는 해당 페이지를 공식 금액 기준이 아닌 참고용 판단 자료로 안내한다. 다른 표본 글에서도 "이번 검수", "검수 대상", "추후 보완" 같은 제작 진행 메모가 남았는지 확인했고, 표본 11개에서 내부 진행상태를 독자에게 알리는 문장은 발견하지 못했다. 완장 글의 조사 한계는 독자에게 의미 있는 사실 범위 설명으로 재작성했다.
+
+### 최신 변경 SHA — 해당 파일을 다시 읽어 확인
+
+- in-law-obituary-message.md: e98b415b3a230495050eb3ce7e853551c52def72
+- husbands-father-condolence-text.md: b3ffcae59b4812ff4124b418dcc9282b23028dba
+- husbands-mother-condolence-text.md: 84f7aecab9aad1f6cc05546a10aef818fddae7a5
+- eldest-uncle-condolence-text.md: aba5bc9f02ef68fc1a5e13246fc22273ba4753ba
+- younger-uncle-condolence-text.md: b4c809843a30f86e0dad8d72cad41c7bb3ea5d7d
+- guestbook-writing-guide.md: e7287e96127374f102d105626b7345af9ad6e143
+- mourning-armband-position.md: 7fe728a2e2a11ec9ea03674935c586ff37f72acd
+
+이 목록 외의 4개 표본(in-law 외 10개 중 maternal-grandmother, condolence-money-name-position, wife-condolence-text, condolence-money-by-relation)은 이번 단계에서 추가 본문 수정이 없었다. 다만 PR 최신 head에서 파일 재조회 및 FAQ·예문 검사를 다시 수행한다.
+
+### 빌드와 미리보기 한계
+
+이전 head 7f4c4940ce0dd85874950295c9508bbb673fab0c의 Cloudflare Pages check run 121125858574는 성공으로 보고되었고, preview URL https://8f815013.easybugo-blog.pages.dev 가 확인되었다. 사용자 제공 독립 검수에서는 미리보기와 11개 URL의 HTTP 200이 보고되었다. 이 대화에서는 미리보기 HTML을 직접 읽지 못했으므로, 본문·내부 링크의 실제 렌더링을 직접 검증했다고 주장하지 않는다. 현재 head의 새 Cloudflare check 결과를 별도로 확인해야 한다.
