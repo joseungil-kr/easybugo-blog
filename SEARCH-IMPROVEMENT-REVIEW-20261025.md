@@ -76,3 +76,51 @@
 - Hugo 빌드 및 회귀검사를 실제 실행하지 못했다면 성공으로 보고하지 않는다.
 - PR은 Draft로 열어 검토 가능하게 하되, main 병합이나 운영 배포를 유발하지 않는다.
 - 검색 회복은 코드 변경 완료와 별개다. GSC의 색인·노출 추세가 실제로 개선되기 전에는 회복 완료로 판단하지 않는다.
+
+
+## 추가 검수 2026-10-25 — 콘텐츠 정확성 보완
+
+이번 추가 수정은 같은 PR #2 브랜치에서 진행했다. 기존 보고서의 10개 표본 요약은 초기 단계 기록이며, 아래의 상세 표가 현재 검수 상태와 변경 SHA를 대체한다.
+
+| 파일 | 원래 검색 의도 | 수정 전 문제 | 수정 후 고유한 정보 | 확인한 근거 | 남은 미확인 | 변경 SHA |
+|---|---|---|---|---|---|---|
+| in-law-obituary-message.md | 장인·장모상 표현과 부고 제목 확인 | FAQ에서 며느리는 부친상·모친상을 그대로 쓴다고 단정해 본문과 불일치 | 고인·부고 당사자·실제 전달자·관계 4개 구분. 제3자 전달 예시. 빙부·빙모는 관습적 용법이며 단일 정답으로 규정하지 않음 | 국립국어원 온라인가나다, 2026-02-03 https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=327052 | 실제 기관별 부고 양식은 별도 확인 필요 | c690451433de9cb84e343fd9802f4c9292b5915d |
+| husbands-father-condolence-text.md | 시부상 뜻과 상주에게 보낼 위로 | 부고 제목의 일반적 표기를 발신인·당사자·대리 전달 상황과 충분히 구분하지 않음 | 지인에게 위로하는 문장, 고인 호칭을 모를 때의 문장, 대리 전달 문구를 분리 | 관계 표현을 설명형으로 재작성. 위로문구는 편집자 작성 예시 | 시부상 실제 부고 제목의 사용 빈도는 검증하지 않음 | a7bc4c7cd807f1ac297edb6903ac1f6b2fcee05d |
+| eldest-uncle-condolence-text.md | 백부상 뜻, 조카 당사자 또는 지인에게 위로 | 사촌에게 보내는 문구가 중심이어서 제3자가 자기 큰아버지인 듯 부를 위험 | 조카가 자기 가족 부고를 알리는 문구와 제3자가 지인에게 보내는 위로를 분리 | 국립국어원 한국어기초사전 백부 https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=58693&captchaNumber=&comment_user_name=&nation=eng&nationCode=6&viewTypes=on&wordComment= | 가족별 호칭은 차이가 있을 수 있음 | e1beb4374f4b5470e49df91102f7e42148fc534b |
+| maternal-grandmother-condolence-text.md | 외조모상 뜻과 위로문자 | 외조부/외조모 이름만 바꾸는 형태가 강하고 상황 구분이 제한적 | 외조부·외조모 차이, 친구·지인·불참 상황별 문구 보강 | 이번 단계에서 독립적인 공공 원문은 확보하지 못함. 문구는 편집자 작성 예시 | 외조모 용어 사전 원문 및 실제 사용 관행 추가 검증 | 48f866b9fa19a863076baf21caca4a61536da0db |
+| husbands-mother-condolence-text.md | 시모상 뜻과 위로문자 | 모친상으로 그대로 쓴다는 단정 및 제3자 검색 의도 구분 부족 | 시모상 용어 설명, 제3자 위로와 대리 부고 전달 분리 | 관계 표현을 설명형으로 재작성. 국립국어원은 빙부·빙모 관습 용법의 한계를 설명 | 시모상 실제 제목 사용 빈도는 검증하지 않음 | 32f531724ec18e217a11ef2b4cab7d57fc441f68 |
+| condolence-money-name-position.md | 봉투 이름·소속 위치 | 뒷면 왼쪽 아래와 소속 위치를 근거 범위 없이 일반 규칙처럼 설명 | 국립국어원에서 확인된 앞면 부의·근조 안내와 이름 위치에 관한 장례 예시를 구분 | 국립국어원 자료 https://www.korean.go.kr/nkview/nklife/2008_3/2008_0313.pdf | 이름·소속의 정확한 위치를 정한 최신 공공 표준은 확인하지 못함 | cda560fb8e242d347a4a76a35f7ab5ca044832b2 |
+| wife-condolence-text.md | 배우자상을 당한 상주에게 위로문자 | 상황별 발신인 맥락과 근거 범위가 제한적 | 직장 관계·친구·조문 불참 문구, 감정 지시 표현 회피 | 문구는 편집자 작성 예시 | 배우자상 제목 관행 및 종교별 표현은 추가 검증 필요 | 8d1ad7a55ca52adb512d51fd675fa2d67ac0d895 |
+| guestbook-writing-guide.md | 조객록/부의록 작성·관리 | 방문 방명록과 부의금 장부를 거의 같은 의미로 설명, 개인정보 법률 의무와 권고가 섞임 | 조객록/방명록은 방문 기록, 부의록은 부의금 관련 기록이라는 구분. 법률 단정 대신 안전한 관리 권고 | 우리역사넷 https://contents.history.go.kr/mobile/km/view.do?levelId=km_005_0050_0010_0010_0040 ; KCI 학술자료 https://journal.kci.go.kr/koreal/archive/articlePdf?artiId=ART001480375 ; 세림병원 장례식장 https://selimfuneral.cafe24.com/mobile/service/service.php | 시설별 양식 통합/분리 방식은 차이가 있음. 법 적용은 상황별 검토 필요 | 6d4c1e92c82cda0063b5c5b8b90943e83169ddd0 |
+| mourning-armband-position.md | 완장 착용 위치·줄 의미 | 왼팔과 줄 개수 의미를 출처 없이 일반 규칙처럼 설명 | 공공 원문에서 확인된 범위와 미확인 범위를 분리 | e하늘 장사정보서비스 장례용품 가격 예시 https://www.15774129.go.kr/portal/esky/fnlfac/fac_view.do?facilitycd=7000000666&facilitygroupcd=TBC0700001&loc=price&menuId=M0001000100000000&sanbundiv=N | 왼팔 착용과 줄 개수의 전국 공통 표준은 확인하지 못함 | d17c4327ba0fabd526665a53bc5c23736aca906e |
+| younger-uncle-condolence-text.md | 숙부상 뜻과 위로문자 | 사촌 중심 예시 및 백부 글과 구조가 유사해 제3자가 친족 호칭을 혼동할 위험 | 조카가 부고를 알리는 예시와 제3자가 지인에게 위로하는 예시 분리 | 국립국어원 한국어기초사전 숙부 https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=64998&captchaNumber=&comment_user_name=&nation=eng&nationCode=6&viewTypes=on&wordComment= | 사전은 숙부를 아버지의 결혼한 남동생으로 풀이. 실제 가족 호칭은 별도 확인 필요 | b29c7695e063fe53a889e81543a5622bce462727 |
+
+### 백부·숙부 글의 공통/고유 범위
+
+- 공통: 사전상 관계, 부고 원문과 실제 가족 호칭을 우선 확인하는 원칙, 친족 용어만으로 조의금 액수를 단정하지 않는 안내.
+- 백부 글의 고유 정보: 아버지의 맏형/큰아버지 관계, 조카가 자기 큰아버지 부고를 직접 알리는 예시, 제3자가 지인에게 위로하는 예시.
+- 숙부 글의 고유 정보: 아버지의 결혼한 남동생/작은아버지 관계, 조카가 자기 작은아버지 부고를 알리는 예시, 제3자 위로에서 호칭을 모를 때 관계를 생략하는 예시.
+- 남은 차별화 과제: 두 문서의 제목/문단 구조가 아직 유사하다. 다음 검수에서 백부 글은 맏형의 범위, 숙부 글은 결혼한 남동생이라는 사전 범위와 일상 호칭 차이를 더 분명히 검토한다. 통합하지 않는다.
+
+### 연결 문서: condolence-money-by-relation.md
+
+기존 금액표는 출처·조사 방법·기준일이 제시되지 않았고, '직계가족(형제자매 등)'이라는 표현은 친족 범주를 정확하게 구분하지 않았다. 이번 브랜치에서 금액표를 제거하고 상황별 판단 기준을 안내하도록 수정했다.
+
+- 수정 후 SHA: 41fc49b1a582ef4a1b1d7c29ef8000d1f0c61bf7
+- 다른 글에 출처 없는 금액표가 있는지는 183개 본문 전체 감사 중 우선 검색 대상으로 남긴다.
+- 봉투 글은 조의금 금액의 정답 근거로 연결하지 않는다.
+
+### 시설 228개 검수 — 확인 범위만 보고
+
+- 구조 확인: 4개 시설 유형의 콘텐츠 어댑터 파일, data/regions.json(1,633,678 bytes), layouts/partials/facility-items.html의 표시 필드를 확인했다.
+- 대표 표본: 실제 시설 데이터 행을 읽고 공공 원문과 대조한 표본은 0개다. data/regions.json은 연결 도구에서 파일이 너무 커 원문 내용을 읽지 못했다.
+- 원본 출처·기준일: 현재 읽은 저장소 파일만으로 data/regions.json의 출처 URL과 자료 기준일을 확정하지 못했다.
+- 개별 시설 대조: 원본 대조 완료 0/228, 미완료 228/228.
+- 시설 데이터·시설 URL·sitemap·robots·canonical은 변경하지 않았다.
+- 다음 검수는 데이터 생성 경로 또는 원본 출처 메타데이터를 확인하고 대표 시설 표본부터 대조하는 것이다. 출처 없는 가격·배송·운영시간은 생성하지 않는다.
+
+### 빌드와 배포 검증 한계
+
+저장소 트리에서 .github/workflows 파일이 보이지 않고 Actions runs 조회도 0건이었다. 이는 GitHub Actions 경로의 증거가 없다는 뜻이며 Cloudflare Pages 경로가 없다는 뜻은 아니다. 이번 단계에서는 해당 SHA에 연결된 Cloudflare Pages 빌드/미리보기 증거를 확보하지 못했으므로 렌더링 및 Hugo 빌드는 미검증으로 유지한다. frontmatter·FAQ·파일 저장 재조회는 확인했으나 실제 HTML 렌더링은 확인하지 않았다.
+
+운영 main, PR #1, 운영 사이트, robots, sitemap, canonical, 시설 데이터, DNS·권한은 변경하지 않았다. PR #2는 Draft로 유지하며 검색 회복은 별도 GSC 증거가 나오기 전까지 미확정이다.
