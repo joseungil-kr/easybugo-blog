@@ -189,3 +189,24 @@
 ### 빌드와 미리보기 한계
 
 이전 head 7f4c4940ce0dd85874950295c9508bbb673fab0c의 Cloudflare Pages check run 121125858574는 성공으로 보고되었고, preview URL https://8f815013.easybugo-blog.pages.dev 가 확인되었다. 사용자 제공 독립 검수에서는 미리보기와 11개 URL의 HTTP 200이 보고되었다. 이 대화에서는 미리보기 HTML을 직접 읽지 못했으므로, 본문·내부 링크의 실제 렌더링을 직접 검증했다고 주장하지 않는다. 현재 head의 새 Cloudflare check 결과를 별도로 확인해야 한다.
+
+
+### 최종 재조회용 최신 SHA 및 상태 정정
+
+위 표의 SHA는 최초/중간 수정 시점 값이다. 아래 SHA가 추가 검수 후 해당 파일을 다시 읽어 확인한 최신 blob SHA이므로 위 표보다 우선한다.
+
+- in-law-obituary-message.md: 5b23251ec607b7469ebc78b830ebe4e6b89f083a
+- husbands-father-condolence-text.md: 64070f658af4a6ebd9593c304dec1612ea512d68
+- husbands-mother-condolence-text.md: 72755a4e5d40694894f3e7ce2cb0eac606227117
+- eldest-uncle-condolence-text.md: e8a87a24c273108ffc81c0fa32688fcdf8d891d8
+- younger-uncle-condolence-text.md: 2e590e1030555ae51cb86ff4abcdf2fa2e800dce
+- guestbook-writing-guide.md: 07b24778cf793fa10aba5781c1d63306019c63a4
+- mourning-armband-position.md: 78418f25395342a4d17f636f2c37c662ae2e54f1
+- maternal-grandmother-condolence-text.md: 48f866b9fa19a863076baf21caca4a61536da0db
+- condolence-money-name-position.md: cda560fb8e242d347a4a76a35f7ab5ca044832b2
+- wife-condolence-text.md: 8d1ad7a55ca52adb512d51fd675fa2d67ac0d895
+- condolence-money-by-relation.md: 41fc49b1a582ef4a1b1d7c29ef8000d1f0c61bf7
+
+추가 수정 후 다시 확인한 FAQ 질문은 main의 기존 질문 의도를 유지하면서 답변을 정확하게 수정했다. 백부의 '평소 왕래가 적었던 경우', 숙부의 '결혼 안 한 삼촌상' 질문을 복원했고, in-law의 딸·며느리 질문과 시부·시모의 기존 질문도 복원했다. 잘못된 예전 답변은 복원하지 않았다.
+
+Cloudflare check run 121125858574와 미리보기 URL 8f815013에 대한 HTTP 200 및 새 본문 확인은 사용자 제공 독립 검수 결과로 기록한다. 이 세션의 웹 열람 도구는 해당 preview URL에 접근할 수 없어 실제 HTML 소스의 직접 재검수는 수행하지 못했다. 미리보기의 X-Robots-Tag noindex는 미리보기 환경의 신호이며 운영 색인 복구의 증거가 아니다.
