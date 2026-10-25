@@ -247,3 +247,64 @@ Cloudflare check run 121125858574와 미리보기 URL 8f815013에 대한 HTTP 20
 ### 최신 표본 SHA와 확인 상태
 
 위 세 SHA는 수정 후 파일을 다시 읽어 확인한 blob SHA다. 최신 PR head에 대해서는 별도로 Cloudflare Pages check run을 확인한다. 빌드 성공과 실제 HTML 소스 열람은 별도 검증으로 취급하며, 미리보기 접근 실패를 성공으로 간주하지 않는다.
+
+
+## 추가 독립 원문 검수 — 관계별 부고·위로문자 20편 (2026-10-25)
+
+### 범위와 판정 기준
+- 아래 20개 파일은 기존 11개 표본을 제외하고, PR #2 브랜치에서 전체 Markdown 본문을 읽었다. 제목만 보고 분류하지 않고 title/description/FAQ/본문 예문/내부 링크를 확인했다.
+- '근거 부족'은 곧 사실 오류라는 뜻이 아니다. 관습의 사용 빈도, 조의금 금액, 특정 표현의 우열을 뒷받침하는 공신력 있는 원문이나 조사 자료가 본문에 없는 경우다.
+- 금액 권고는 공식 기준이 확인되지 않지만, 편집자 의견을 사실 오류로 오인해 대량 치환하지 않기 위해 이번에는 수정하지 않고 근거 부족으로 기록했다.
+- 네 개의 부고 양식 문서에서 관습을 확정적으로 말하는 문장을 최소 수정하고, 복사해 쓰는 템플릿의 과거 고정 날짜를 자리표시자로 바꿨다. 나머지 16개 본문은 수정하지 않았다.
+
+### 20편 원문 검수 목록
+
+| 파일 · 읽은 SHA | 원래 독자·FAQ·고유 정보 | 근거 부족·내부 링크·중복 판단 |
+|---|---|---|
+| father-condolence-text.md · c18b6b377ab178ec6f700cc354887d5b7ec4584f | 부친상 소식을 받은 지인. FAQ: 문자만 보내도 되는지, '호상' 표현. 아버지 호칭별 위로문자 예시. | 5만/10만원 권고에 출처 없음. 링크: condolence-money-by-relation, father-obituary-message, new.html. mother 글과 구조 유사하나 '호상' FAQ가 고유. |
+| mother-condolence-text.md · dbe7cc7a369cd0f88e658c9be9e62b69bb3f8162 | 모친상 소식을 받은 지인. FAQ: 부친상과 문구 차이, 직장 상사에게 문자만 보내도 되는지. | 5만/10만원 권고 출처 없음. 링크: condolence-money-by-relation, mother-obituary-message, new.html. father 글과 구조 유사, 상사 FAQ가 고유. |
+| brother-condolence-text.md · 40f3aa5534f74cdd78da794a259d45ed6ee6c41f | 형제상 지인에게 위로. FAQ: 형/동생 구분, 부모 생존 시 누구에게 연락할지. | 5만/10만원 및 직계가족 수준 권고 출처 없음. 링크: condolence-money-by-relation, sibling-obituary-message, new.html. sister 글과 구조 유사, 부모 생존 FAQ가 고유. |
+| sister-condolence-text.md · 9ee8c2b045da499e9f97098034e7a32566ab7052 | 자매상 지인에게 위로. FAQ: 형제상과 구분 여부, 여자 형제 상주에게 조심할 점. | 5만/10만원·직계가족 수준 권고 출처 없음. 링크: condolence-money-by-relation, sibling-obituary-message, new.html. brother 글과 중복 높음; 통합하지 않고 검색성과·본문 비교 후보로 기록. |
+| son-condolence-text.md · 6c19feea8fba836b014b483e6524c51d80c65724 | 아들상을 당한 부모에게 위로. FAQ: '자상' 표현, 자녀를 먼저 보낸 부모에게 피할 조언. | 5만/10만원 권고 출처 없음. 링크: condolence-money-by-relation, obituary-message-format, new.html. daughter 글과 구조 유사, 부모의 상실 상황이 핵심. |
+| daughter-condolence-text.md · a1d6f7c354433be2252c5fa108d39f74598721aa | 딸상을 당한 부모에게 위로. FAQ: '여상' 표현, SNS로 소식을 알았을 때 연락. | 5만/10만원 권고 출처 없음. 링크: condolence-money-by-relation, obituary-message-format, new.html. son 글과 중복 높음, SNS FAQ가 고유. |
+| husband-condolence-text.md · 05f42e03a0b3971b37f1c6d6e8933955ddf77d8a | 남편상을 당한 상주에게 위로. FAQ: 부상/부군상 표현, 재혼·미래를 묻는 말 주의. | 5만/10만원 권고 출처 없음. 링크: condolence-money-by-relation, spouse-obituary-message, new.html. 기존 제외 표본 wife-condolence-text와 구조 대응. |
+| father-in-law-condolence-text.md · 582f4d6886989d6fea3f9797f39ee84600af5ec8 | 지인의 빙부상·장인상 소식을 들은 제3자. FAQ: 빙부상 뜻, 사위 본인의 부고 작성. | 5만/10만원 및 배우자 부모 금액 권고 출처 없음. 링크: condolence-money-by-relation, father-in-law-obituary, new.html. mother-in-law 글과 구조 유사, 장인 호칭과 관련 양식이 고유. |
+| mother-in-law-condolence-text.md · 0656f679c8d66b8cc32029cdb36031d4038c76ce | 지인의 빙모상·장모상 위로. FAQ: 빙모상 뜻, 빙부상과 문구 차이. | 5만/10만원 및 배우자 부모 금액 권고 출처 없음. 링크: condolence-money-by-relation, mother-in-law-obituary, new.html. father-in-law 글과 구조 유사. |
+| maternal-grandfather-condolence-text.md · 6c454ef698d26d6606ab0a5ffee96ec42f595efe | 외조부상 뜻과 위로. FAQ: 조부상과 문구 차이, 외조부모상 조의금 의무. | 조부모상 금액 권고 출처 없음. 링크: condolence-money-by-relation, maternal-grandfather-obituary, new.html. grandfather 글과 구조 유사, 외가 관계 구분이 고유. |
+| maternal-aunt-condolence-text.md · 69d8ac230d982401b6ebf6af909d50fb99e3a0db | 이모상 뜻과 위로. FAQ: 이모/고모 구분, 개인 기억을 담아도 되는지. | 방계 친척 3만~5만원 권고 출처 없음. 링크: condolence-money-by-relation, obituary-message-format, new.html. paternal-aunt 글과 구조 유사, 개인 기억 FAQ가 고유. |
+| maternal-uncle-condolence-text.md · 2efd94fd64b27c78f6a95917d0d79b359c32dafc | 외숙부상 뜻과 위로. FAQ: 외숙부/숙부 차이, 일상 호칭 '삼촌' 사용. | 방계 친척 3만~5만원 권고 출처 없음. 링크: condolence-money-by-relation, obituary-message-format, new.html. 기존 제외 표본 younger-uncle 글과 관계 구분 의도 중첩, 외가 호칭이 고유. |
+| paternal-aunt-condolence-text.md · 3a68bacfa500b16ddf05caac102ff1c95f7009c3 | 고모상 뜻과 위로. FAQ: 고모/이모 구분, SNS로 알았을 때 연락. | 방계 친척 3만~5만원 권고 출처 없음. 링크: condolence-money-by-relation, obituary-message-format, new.html. maternal-aunt 글과 구조 유사, SNS FAQ가 고유. |
+| grandfather-condolence-text.md · f3b055dfff1b6aa6342a6e98bb7a4be9e7acaf47 | 조부상 뜻, 늦게 알았을 때 연락. FAQ: 늦은 위로, 조부모상 조의금 의무. | 3만~5만원 권고 출처 없음. 링크: condolence-money-by-relation, grandfather-obituary-message, new.html. grandmother·maternal-grandfather 글과 구조 유사, 늦은 연락 FAQ가 고유. |
+| grandmother-condolence-text.md · 0e133ca1cf83933131bb2b17e924c0c9da4d7e7b | 조모상 뜻과 친할머니/외할머니 구분. FAQ: 조부상과 문구 차이, 외할머니상과 구분. | 3만~5만원 권고 출처 없음. 링크: condolence-money-by-relation, grandmother-obituary-message, new.html. grandfather 글과 구조 유사, 외조모 구분이 고유. |
+| daughter-in-law-son-in-law-notation.md · fa218d040fd2f53d1cfc2391500dc29b9cae4da0 | 부고 상주 명단에 며느리·사위를 넣을지. FAQ: 꼭 넣어야 하는지. | '최근에는 흔하다'는 빈도 근거 없음. 링크: chief-mourner-notation. 해당 상주 표기 문서와 기능 중첩 가능; 실제 본문 범위·검색 성과 비교 전 통합 보류. |
+| father-in-law-by-marriage-obituary.md · d18c47ead18725366b1796a1ff90264584dd20aa | 며느리 명의/아들과 공동명의로 시아버지 부고 작성. FAQ: 며느리도 [부친상]인지. | 관습 표현을 '보통 부친상', '별도 한자어 없음'으로 단정할 근거 부족. 링크: father-obituary-message, mother-in-law-by-marriage-obituary. father-obituary와 구조 중첩, 시아버지/며느리 상황은 고유. 최소 수정함. |
+| mother-in-law-by-marriage-obituary.md · 2f5211684e0ea5dfab959e5330455f6d8e2d840a | 며느리 명의/아들과 공동명의로 시어머니 부고 작성. FAQ: 친정어머니와 문구 차이. | [모친상]을 일반 규칙으로 안내할 근거 범위가 제한적. 링크: mother-obituary-message, father-in-law-by-marriage-obituary. mother-obituary와 구조 중첩, 시어머니/며느리 상황은 고유. 최소 수정함. |
+| father-obituary-message.md · 111004697856ff66f4bb7707c112145a7175e0e2 | 부친상 부고 제목과 기본/짧은/회사 양식. FAQ: 제목 의미, 딸 상주, 장인상과 구분. | 장인상 제목을 보통 빙부상이라고 단정한 근거 부족. 템플릿에 과거 고정 날짜가 있어 복사 시 오발송 위험. 링크: mother-obituary-message, new.html. mother-obituary와 구조 중첩. 제목 단정·날짜를 최소 수정함. |
+| mother-obituary-message.md · 6648324839e3ce493259bc7a51fe0c60b5d465a6 | 모친상 부고 제목과 기본/짧은/회사 양식. FAQ: 며느리 상주, 장모상과 모친상, 친정/시어머니 문구. | 장모상 제목을 보통 빙모상이라고 단정한 근거 부족. 템플릿에 과거 고정 날짜가 있어 복사 시 오발송 위험. 링크: father-obituary-message, new.html. father-obituary와 구조 중첩. 제목 단정·날짜를 최소 수정함. |
+
+### 중복 후보와 조치 원칙
+
+- 높은 구조 중첩: father/mother condolence; brother/sister; son/daughter; father-in-law/mother-in-law condolence; maternal/paternal aunt; grandfather/grandmother; father/mother obituary.
+- 부분 중첩: maternal-grandfather와 grandfather/grandmother; maternal-uncle과 기존 제외 표본 younger-uncle; daughter-in-law-son-in-law-notation과 chief-mourner-notation; father/mother-in-law obituary와 father/mother obituary.
+- 위 중첩은 제목·FAQ·본문 구조를 읽고 판정한 검토 후보이지, 전체 페이지가 동일하거나 통합이 정답이라는 뜻이 아니다. 이번에는 삭제·통합·URL 변경을 하지 않았다.
+
+### 최소 수정 4개 — 최신 blob SHA
+
+- father-in-law-by-marriage-obituary.md: 1a71fa3c9c21b238a38fa0eb25c99201559138ba
+- mother-in-law-by-marriage-obituary.md: 3b99c2a2d907f2f824eaf1f698f835419e8a096a
+- father-obituary-message.md: 3c30d5bd2d79354835455184c20e56cb8bae53b9
+- mother-obituary-message.md: d2c60c4fb810164c86aa6e3e80b2b41117bfea6a
+
+수정은 부고 제목 관습을 확정적으로 단정하던 FAQ/lead 표현과 과거 고정 날짜만 대상으로 했다. 이름·장례식장·호실·별세일·발인일은 예시 자리표시자로 바꿨다. 나머지 16개는 수정하지 않았다.
+
+### 시설 데이터 생성 경로 조사
+
+- 저장소 커밋 c3669c5db3e392c66f10ae8ab0910b5bc2836ea3의 본문은 build_region_pages.py가 지역 집계 값을 계산해 data/regions.json에 넘긴다고 설명한다. 하지만 해당 스크립트는 최신 브랜치의 저장소 트리에 없다. 이 저장소만으로 원본 수집·변환의 실행 경로, 코드 버전, 다운로드 로그를 재현할 수 없다.
+- 현재 저장소의 data/regions.json은 1,633,678 bytes이며, 네 개의 _content.gotmpl과 layouts/partials/facility-items.html은 이 파일을 읽어 페이지를 생성/표시한다. 생성 템플릿은 있으나 원천 CSV/ZIP, 변환 스크립트, 원본 URL·체크섬·다운로드 일시 메타데이터는 저장소에서 찾지 못했다.
+- 공개 데이터 카탈로그에서 확인된 원천 후보는 공공데이터포털의 「재단법인한국장례문화진흥원 전국 장사시설 현황 시설 가격정보」, 제공기관 재단법인한국장례문화진흥원, 메타 URL https://www.data.go.kr/data/15021763/fileData.do, 파일명 '재단법인한국장례문화진흥원_장사시설(시설 및 가격정보) 현황_2023년 6월.zip'이다. 설명은 보건복지부 e하늘 장사정보시스템에 등록된 시설/가격정보라고 밝힌다.
+- 공개 운영 지역 페이지는 '공공데이터(전국 장사시설 현황) 기준일 2026-08-26'이라고 표시한다. 이 날짜는 사이트가 표시하는 데이터 기준일이지만, 현재 저장소에는 이를 원천 파일의 실제 갱신일과 연결하는 메타데이터가 없어 원본 갱신일로 독립 검증할 수 없다.
+- 결론: 원천 제공기관·공개 데이터셋은 특정했지만, 실제 사용된 파일 버전과 생성 스크립트의 보관 위치는 미확인이다. 이번에는 시설 데이터와 템플릿을 수정하지 않았다. 다음 단계는 스크립트가 있던 작업 저장소/외부 운영 기록에서 build_region_pages.py와 다운로드 메타데이터를 찾는 것이다.
+
+### 검증 제한
+
+수정한 네 파일은 저장 후 다시 읽어 SHA를 확인한다. Cloudflare Pages는 최신 head에서 별도 check로 확인하며, 실제 렌더링/모바일 시각 검수와 183개 전체 본문 감사는 이 20편 작업 범위에 포함되지 않는다. PR #1, main, 기능 코드, 시설 데이터, 운영 배포, 권한·DNS는 변경하지 않는다.
