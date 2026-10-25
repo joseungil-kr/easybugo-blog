@@ -124,3 +124,11 @@
 저장소 트리에서 .github/workflows 파일이 보이지 않고 Actions runs 조회도 0건이었다. 이는 GitHub Actions 경로의 증거가 없다는 뜻이며 Cloudflare Pages 경로가 없다는 뜻은 아니다. 이번 단계에서는 해당 SHA에 연결된 Cloudflare Pages 빌드/미리보기 증거를 확보하지 못했으므로 렌더링 및 Hugo 빌드는 미검증으로 유지한다. frontmatter·FAQ·파일 저장 재조회는 확인했으나 실제 HTML 렌더링은 확인하지 않았다.
 
 운영 main, PR #1, 운영 사이트, robots, sitemap, canonical, 시설 데이터, DNS·권한은 변경하지 않았다. PR #2는 Draft로 유지하며 검색 회복은 별도 GSC 증거가 나오기 전까지 미확정이다.
+
+
+### Cloudflare Pages 확인 — 2026-10-25
+
+- GitHub commit check API에서 Cloudflare Pages check run을 직접 확인했다.
+- 직전 head d98e37bee3250840d791777e04205c0bcf7f8f51의 Cloudflare Pages 결과: completed / success. Preview URL은 https://4a06d96e.easybugo-blog.pages.dev, branch preview는 https://content-search-intent-top10.easybugo-blog.pages.dev.
+- 이 결과는 Cloudflare가 해당 SHA에 대해 미리보기 빌드/배포를 성공으로 보고했다는 증거다. 웹 열람 도구에서는 preview 페이지 URL이 접근 불가로 반환되어 실제 렌더된 본문 HTML과 내부 링크를 직접 검수하지 못했다. 따라서 빌드 성공은 확인됐으나, 실제 렌더링 검수는 미완료다.
+- 이 작업 기록을 추가 수정했으므로 새 head의 Cloudflare check run이 다시 실행될 수 있다. 최종 PR head의 check 상태를 별도로 재확인한다.
