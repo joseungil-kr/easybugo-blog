@@ -4,7 +4,7 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Description }}">
 <meta property="og:image" content="https://easybugo.com/img/og-obit.png">
-<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ partial "canonical-url.html" . }}">
 <meta property="og:type" content="website">
 {{ end }}
 {{ define "main" }}
@@ -22,7 +22,14 @@
 
 {{ partial "region-figure.html" (dict "tiles" $p.tiles "chart" $p.chart "caption" (printf "%s 시·군·구별 %s 수" $p.sido $p.label)) }}
 
-{{ with $p.children }}
+{{ $children := slice }}
+{{ range $p.children }}
+  {{ $child := site.GetPage .url }}
+  {{ if eq $child.Permalink (partial "canonical-url.html" $child) }}
+    {{ $children = $children | append . }}
+  {{ end }}
+{{ end }}
+{{ with $children }}
 <h2 id="sigungu">시·군·구별로 보기</h2>
 <nav class="cat-grid" aria-label="시군구">
   {{ range . }}<a href="{{ .url }}">{{ .title }}</a>{{ end }}

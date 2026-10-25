@@ -1,0 +1,9 @@
+{{- $paths := dict
+  "/장례식장/세종특별자치시/세종특별자치시/" "/장례식장/세종특별자치시/"
+  "/봉안시설/세종특별자치시/세종특별자치시/" "/봉안시설/세종특별자치시/"
+-}}
+{{- $url := .Permalink -}}
+{{- with index $paths (.Params.url | default "") -}}
+  {{- with site.GetPage . -}}{{- $url = .Permalink -}}{{- end -}}
+{{- end -}}
+{{- return $url -}}
