@@ -1,5 +1,5 @@
 {
-  "theme_index": 3,
+  "theme_index": 4,
   "history": [
     {
       "date": "2026-11-06",
@@ -20,6 +20,13 @@
       "title": "기독교 천국환송예배 부고 문자 양식 및 성경 위로 구절 모음",
       "slug": "christian-heavenly-farewell-obituary-scripture-templates",
       "category": "부고 문자",
+      "score": 100
+    },
+    {
+      "date": "2026-11-18",
+      "title": "장례식 복장 규정과 조문객 신발·양말·외투 예절 총정리",
+      "slug": "funeral-dress-code-socks-shoes-guide",
+      "category": "조문 예절",
       "score": 100
     }
   ]
