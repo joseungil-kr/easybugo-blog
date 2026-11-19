@@ -1,5 +1,5 @@
 {
-  "theme_index": 4,
+  "theme_index": 0,
   "history": [
     {
       "date": "2026-11-06",
@@ -27,6 +27,13 @@
       "title": "장례식 복장 규정과 조문객 신발·양말·외투 예절 총정리",
       "slug": "funeral-dress-code-socks-shoes-guide",
       "category": "조문 예절",
+      "score": 100
+    },
+    {
+      "date": "2026-11-19",
+      "title": "부친상·모친상 부고 알림 문자 작성법과 필수 포함 항목 총정리",
+      "slug": "parents-obituary-notice-writing-guide",
+      "category": "부고 문자",
       "score": 100
     }
   ]
