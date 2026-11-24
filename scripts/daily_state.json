@@ -1,5 +1,5 @@
 {
-  "theme_index": 0,
+  "theme_index": 1,
   "history": [
     {
       "date": "2026-11-06",
@@ -34,6 +34,13 @@
       "title": "부친상·모친상 부고 알림 문자 작성법과 필수 포함 항목 총정리",
       "slug": "parents-obituary-notice-writing-guide",
       "category": "부고 문자",
+      "score": 100
+    },
+    {
+      "date": "2026-11-24",
+      "title": "장례 후 직장 동료 및 상사 조문 답례 문자 예시와 발송 시점",
+      "slug": "workplace-colleague-condolence-thank-you-message",
+      "category": "관계별 부고 문자",
       "score": 100
     }
   ]
