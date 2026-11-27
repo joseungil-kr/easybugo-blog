@@ -1,7 +1,7 @@
 ---
 title: "기독교 천국환송예배 부고 문자 양식 및 성경 위로 구절 모음"
 description: "기독교(개신교) 장례 시 사용하는 천국환송예배, 입관·발인예배 일정 안내 문구와 유가족에게 전하는 성경 위로 구절을 정리했습니다."
-date: 2026-11-17
+date: 2026-11-27
 categories: ["부고 문자"]
 lead: "기독교 장례는 슬픔 속에서도 다시 만날 천국 소망을 나누는 예식입니다. 교인과 지인에게 보내는 기독교식 부고 문자 양식과 조문 위로 문구를 안내합니다."
 slug: "christian-heavenly-farewell-obituary-scripture-templates"
